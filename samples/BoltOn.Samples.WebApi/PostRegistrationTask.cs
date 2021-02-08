@@ -6,7 +6,7 @@ using BoltOn.Samples.Application.Entities;
 
 namespace BoltOn.Samples.WebApi
 {
-    public class PostRegistrationTask //: IPostRegistrationTask
+    public class PostRegistrationTask // : IPostRegistrationTask
     {
         private readonly IServiceProvider _serviceProvider;
 
@@ -19,8 +19,8 @@ namespace BoltOn.Samples.WebApi
         {
             using var scope = _serviceProvider.CreateScope();
             var writeDbContext = scope.ServiceProvider.GetService<SchoolDbContext>();
-            writeDbContext.Database.EnsureDeleted();
-            writeDbContext.Database.EnsureCreated();
+			//writeDbContext.Database.EnsureDeleted();
+			writeDbContext.Database.EnsureCreated();
 
             var inState = new StudentType(1, "In-State");
             var outOfState = new StudentType(2, "Out-of-State");

@@ -17,7 +17,7 @@ namespace BoltOn.Samples.Application.Handlers
 	{
 		public async Task<PongResponse> HandleAsync(PingRequest request, CancellationToken cancellationToken)
 		{
-			return await Task.FromResult(new PongResponse { Data = "pong" });
+			return await Task.FromResult(new PongResponse { Data = "pong test 1 2" });
 		}
 	}
 }
